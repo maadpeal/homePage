@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 2em;
+            font-family: 'helvetica', 'sans-serif';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-weight: 850;
+        }
+    </style>
+</head>
+
+<body id='body'>
+    <header>
+        <h4 id='nombre' onclick="assignAttribute()">Adrian Matute</h4>
+    </header>
+    <section class='body-section'>
+        <h3 id='titulo' class='titulo' onclick="assignAttribute()" >Creando</h3>
+    </section>
+    <footer></footer>
+    <script>
+        function assignAttribute() {
+
+            let miNombre = document.getElementById('nombre');
+            let tituloCentrado = document.getElementById('titulo');
+
+            if (miNombre.style.color === '') {
+                miNombre.style.color = 'white';
+                document.body.style.backgroundColor = 'black';
+                tituloCentrado.style.color = 'white';
+            }
+
+            miNombre.style.color = changeColor(miNombre.style.color);
+            document.body.style.backgroundColor = changeColor(document.body.style.backgroundColor);
+            tituloCentrado.style.color = changeColor(tituloCentrado.style.color);
+        }
+
+        function changeColor(attritbute) {
+            return attritbute === 'black' ? 'white' : 'black'
+        }
+    </script>
+</body>
+
+</html>
