@@ -17,15 +17,14 @@
             color: white;
         }
 
-        .titulo {
-            text-align: center;
-            font-size: 2em;
-            font-family: 'helvetica', 'sans-serif';
+        .imagen {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translateX(-50%) translateY(-50%);
             font-weight: 850;
+            width: 560px;
+            height: 360px;
         }
     </style>
 </head>
@@ -35,24 +34,21 @@
         <h4 id='nombre' onclick="assignAttribute()">Adrian Matute</h4>
     </header>
     <section class='body-section'>
-        <h3 id='titulo' class='titulo' onclick="assignAttribute()" >Creando</h3>
+        <img class='imagen' src="https://media.giphy.com/media/Q92nwt2v5pFL9v2dH8/giphy.gif" onclick="assignAttribute()"/>
     </section>
     <footer></footer>
     <script>
         function assignAttribute() {
 
             let miNombre = document.getElementById('nombre');
-            let tituloCentrado = document.getElementById('titulo');
 
             if (miNombre.style.color === '') {
                 miNombre.style.color = 'white';
                 document.body.style.backgroundColor = 'black';
-                tituloCentrado.style.color = 'white';
             }
 
             miNombre.style.color = changeColor(miNombre.style.color);
             document.body.style.backgroundColor = changeColor(document.body.style.backgroundColor);
-            tituloCentrado.style.color = changeColor(tituloCentrado.style.color);
         }
 
         function changeColor(attritbute) {
